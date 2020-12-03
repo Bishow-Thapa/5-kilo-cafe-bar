@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0
+}
+body {
+	font-family: sans-serif;
+	font-size: 11pt;
+}
+
+/* First Flexbox Properties */
+ul {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+.logo {
+	font-family: cursive;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+ul > :first-child {
+	flex-grow: 12;
+	text-align: left;
+	/* background: red; */
+}
+
+li {
+	padding: 16px;
+	align-self: center;
+	flex-grow: 1;
+	text-align: center;
+}
+
+a { text-decoration: none; font-weight: bold;}
+
+/* Another Flexbox Properties */
+article {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+}
+
+section {
+	padding: 16px;
+}
+
+.imsec {
+	flex-grow: 10;
+	/*background: lightgray;*/
+}
+
+.wdsec {
+	flex-grow: 2;
+	padding: 180px 80px 20px 80px;
+	/*flex-shrink: 800;*/
+	/*background: purple;*/
+}
+
+.hfont {
+	font-size: 38pt;
+	font-weight: lighter;
+	margin: 10px 0;
+}
+
+/* For Submit Button */
+.btn {
+	width: 120px;
+	height: 38px;
+	margin: 10px 0px;
+	border: none;
+	color: white;
+	background-color: black;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.btn:hover {
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+}
+
+.prespon {
+	text-align: left;
+	line-height: 1.4;
+	word-spacing: 4px;
+}
+
+/* Hovering */
+ul > :first-child a:hover { text-decoration: none; }
+li > a:hover { text-decoration: underline; }
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+article {
+	flex-flow: column nowrap;
+	width: 100%;
+	}
+
+	.wdsec {
+		flex-grow: 2;
+		padding: 80px 80px 20px 80px;
+	}
+}
